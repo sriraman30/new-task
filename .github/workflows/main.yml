@@ -1,0 +1,15 @@
+name: My First DevOps Pipeline
+
+on: [push]
+
+jobs:
+  run-my-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code from repo
+        uses: actions/checkout@v3
+      
+      - name: Print the result
+        run: |
+          echo "Pipeline is successfully running!"
+          cat task.txt
